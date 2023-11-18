@@ -1,3 +1,17 @@
+<?php 
+  session_start();
+  if (isset($_SESSION['adminId'])) {
+    header ("Location: admin/admin-dashboard.php");
+  }
+
+  else if (isset($_SESSION['consumerId'])) {
+    header ("Location: consumer/consumer-dashboard.php");
+  }
+
+  else if (isset($_SESSION['distributorId'])) {
+    header ("Location: distributor/distributor-dashboard.php");
+  } 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,19 +44,19 @@
 
         <div id="consumerTab" class="tabPanel active" style="background-color: white; width: 600px; padding-top: 30px;">
           <h4 style="padding-left: 10px;"><b>Consumer Login -</b></h4>
-            <form style="padding-top: 20px; padding-left: 50px; padding-right: 50px; padding-bottom: 60px; ">
+            <form method="post" style="padding-top: 20px; padding-left: 50px; padding-right: 50px; padding-bottom: 60px; " action="consumer_login.php">
               
               <label class="control-label" for="password-input" ><b>Consumer ID: </b></label>
-              <input type="text">
+              <input type="text" name="cid">
 
               <label class="control-label" for="password-input" ><b>Password: </b></label>
-              <input type="password">
+              <input type="password" name="cpwd">
 
               <div class="remember-forgot text-center" style="font-size: 14px;">
                 <a href="password-recovery.php"><b>Forgot Password?</b></a>
               </div><br>
               
-              <button type="submit" style="background-color: green; color: white; border-radius: 2px;"><b>Login as Consumer</b></button>
+              <button type="submit" name="submit" style="background-color: green; color: white; border-radius: 2px;"><b>Login as Consumer</b></button>
               <div class="login-register text-center" style="font-size: 14px;">
                 <p><b>Haven't registered yet? </b><a href="register.php" class="register-link"><b>Register Here</b></a></p>
               </div>
@@ -55,19 +69,19 @@
 
         <div id="distributorTab" class="tabPanel" style="background-color: white; width: 600px; padding-top: 30px;">
           <h4 style="padding-left: 10px;"><b>Distributor Login -</b></h4>
-            <form style="padding-top: 20px; padding-left: 50px; padding-right: 50px; padding-bottom: 60px; ">
+            <form method="post" style="padding-top: 20px; padding-left: 50px; padding-right: 50px; padding-bottom: 60px; " action="distributor_login.php">
 
                 <label class="control-label" for="password-input" ><b>Distributor ID: </b></label>
-                <input type="text">
+                <input type="text" name="did">
 
                 <label class="control-label" for="password-input" ><b>Password: </b></label>
-                <input type="password">
+                <input type="password" name="dpwd">
 
                 <div class="remember-forgot text-center" style="font-size: 14px;">
                   <a href="password-recovery.php"><b>Forgot Password?</b></a>
                 </div><br>
                 
-                <button type="submit" style="background-color: green; color: white; border-radius: 2px;"><b>Login as Distributor</b></button>
+                <button type="submit" name="submit" style="background-color: green; color: white; border-radius: 2px;"><b>Login as Distributor</b></button>
                 <div class="login-register text-center" style="font-size: 14px;">
                   <p><b>Haven't registered yet? </b><a href="register.php" class="register-link"><b>Register Here</b></a></p>
                 </div>
@@ -80,15 +94,15 @@
 
         <div id="adminTab" class="tabPanel" style="background-color: white; width: 600px; padding-top: 30px;"><br>
           <h4 style="padding-left: 10px;"><b>Admin Login -</b></h4><br>
-            <form style="padding-top: 20px; padding-left: 50px; padding-right: 50px; padding-bottom: 60px; ">
+            <form method="post" style="padding-top: 20px; padding-left: 50px; padding-right: 50px; padding-bottom: 60px; " action="admin_login.php">
                 
               <label class="control-label" for="password-input" ><b>Admin ID: </b></label>
-              <input type="text">
+              <input type="text" name="aid">
 
               <label class="control-label" for="password-input" ><b>Password: </b></label>
-              <input type="password">
+              <input type="password" name="apwd">
               
-              <button type="submit" style="background-color: green; color: white; border-radius: 2px;"><b>Login as Admin</b></button>
+              <button type="submit" name="submit" style="background-color: green; color: white; border-radius: 2px;"><b>Login as Admin</b></button>
             </form><br>
         </div>
 
