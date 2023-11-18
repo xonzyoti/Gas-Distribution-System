@@ -1,3 +1,6 @@
+<?php 
+    include 'includes/auth.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +20,7 @@
 				<a class="navbar-brand" style="color: white; padding-left: 50px;"><b>ADMIN- DASHBOARD</b></a>
 				<ul class="navbar-nav" style="list-style: none; display: flex; justify-content: flex-end;">
 					<li class="navbar-brand" style="font-size: large; padding-left: 1100px;">
-						<a href="../index.php" style="color: white;"><b>Log-Out</b></a>
+						<a href="logout.php" style="color: white;"><b>Log-Out</b></a>
 					</li>
 				</ul>
 			</div>
