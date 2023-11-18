@@ -16,23 +16,11 @@
 
 <body>
 	<header>
-		<!-- ---- Navbar Section ---- -->
-		<nav class="navbar" style="background-color: green; border-radius: 0%;">
-			<div class="container-nav">
-				<a class="navbar-brand" style="color: white; padding-left: 50px;"><b>ONLINE GAS BOOKING PORTAL</b></a>
-				<ul class="navbar-nav" style="list-style: none; display: flex; justify-content: flex-end;">
-					<li class="navbar-brand" style="font-size: large; margin-right: 5x; padding-left: 850px;">
-						<a href="index.html" style="color: white;"><b>Home</b></a>
-					</li>
-					<li class="navbar-brand" style="font-size: large; margin-right: 5px;">
-						<a href="register.html" style="color: white;"><b>Register</b></a>
-					</li>
-					<li class="navbar-brand" style="font-size: large;">
-						<a href="login.html" style="color: white;"><b>Log-In</b></a>
-					</li>
-				</ul>
-			</div>
-		</nav>
+		<!-- ---- Navbar Section starts ---- -->
+		<?php 
+		include 'includes/navbar.php';
+		?>
+		<!-- ---- Navbar Section ends ---- -->
 	</header><br>
 	
 	<section class="bg-section">
@@ -43,14 +31,6 @@
 					<div class="item active"><img style=" margin: 0 auto;" src="assets/img/2.jpg" alt="Second Image"></div>
 					<div class="item"><img style=" margin: 0 auto;" src="assets/img/3.jpg" alt="Third Image"></div>
 					<div class="item"><img style=" margin: 0 auto;" src="assets/img/4.jpg" width="1000px" height="400px" alt="Fourth Image"></div>
-				</div>
-				<div>
-					<!-- <a class="left carousel-control" href="#carousel-1" role="button" data-slide="prev">
-						<i class="glyphicon glyphicon-chevron-left"></i><span class="sr-only">Previous</span></a>
-
-					<a class="right carousel-control" href="#carousel-1" role="button" data-slide="next">
-						<i class="glyphicon glyphicon-chevron-right"></i><span class="sr-only">Next</span></a> -->
-				</div>	
 				</div>
 			</div>
 		</div>
@@ -159,55 +139,9 @@
 			</div>
 	</section>
 
-
-    <!-- --- Footer Section --- -->
-    <section class="features" style="background-color: rgb(10, 44, 10); padding-left: 0%;">
-        <div class="container">
-            <div class="row">
-              <div class="col-lg-3">
-                <div class="footer-address" style="padding-left: 0%;">
-                  <h4><b>- Quick Links</b></h4>
-                  <ul class="list-unstyled" style="font-size: larger; padding-left: 20px;">
-                    <li><a href="index.html" style="color: white;">Home</a></li>
-                    <li><a href="login.html" style="color: white;"> Log-in</a></li>
-                    <li><a href="register.html" style="color: white;"> Register</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-3" style="padding-left: 30px;">
-                <div class="footer-contact">
-                  <h4><b>Contact Us</b></h4>
-                  <p>East-Gotanagar, Maligaon<br>Guwahati, Assam, Pin: 781011<br>Email: info@example.com<br>Phone: +123456789</p>
-                </div>
-              </div>
-              <div class="col-lg-3" style="padding-left: 70px;">
-                <div class="quick-links">
-                  <h4><b>Developed By</b></h4>
-                  <ul class="list-unstyled">
-                    <p>- Pritviraj Keot <br> Roll No: UT-256-0032</p>
-                    <p>- Hirokjyoti Kalita <br> Roll No: UT-256-0032</p>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-3">
-                <div class="quick-links" style="padding-left: 100px;">
-                  <h4><b>Guided By</b></h4>
-                  <ul class="list-unstyled">
-                    <p>- Pinak Losan Patowary <br> Assistant Professor, LCBC</p>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-    </section>
-    <footer class="site-footer" style="background-color: green;">
-        <div class="container">
-            <div class="row" style="color: white;">
-                <h7><b>Online Gas Distribution System | Copyright © Pritviraj Keot & Hirokjyoti Kalita</b></h7>
-			</div>
-        </div>
-    </footer>
-
+	<?php 
+		include 'includes/footer.php';
+	?>
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>

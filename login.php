@@ -12,23 +12,11 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
-    <!-- ---- Navbar Section ---- -->
-    <nav class="navbar" style="background-color: green; border-radius: 0%;">
-      <div class="container-nav">
-        <a class="navbar-brand" style="color: white; padding-left: 50px;"><b>ONLINE GAS BOOKING PORTAL</b></a>
-        <ul class="navbar-nav" style="list-style: none; display: flex; justify-content: flex-end;">
-          <li class="navbar-brand" style="font-size: large; margin-right: 5x; padding-left: 850px;">
-            <a href="index.html" style="color: white;"><b>Home</b></a>
-          </li>
-          <li class="navbar-brand" style="font-size: large; margin-right: 5px;">
-            <a href="register.html" style="color: white;"><b>Register</b></a>
-          </li>
-          <li class="navbar-brand" style="font-size: large;">
-            <a href="login.html" style="color: white;"><b>Log-In</b></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <!-- ---- Navbar Section starts ---- -->
+    <?php 
+    include 'includes/navbar.php';
+    ?>
+    <!-- ---- Navbar Section ends ---- -->
 
     <!-- ---- Login Form ---- -->
     <section style="padding-left: 450px; padding-top: 80px; padding-bottom: 80px;">
@@ -37,6 +25,8 @@
           <button class="tablinks" onclick="openTab('distributor')"><b>Distributor</b></button>
           <button class="tablinks" onclick="openTab('admin')"><b>Admin</b></button>
         </div>
+
+        <!--consumer tab starts here-->
 
         <div id="consumerTab" class="tabPanel active" style="background-color: white; width: 600px; padding-top: 30px;">
           <h4 style="padding-left: 10px;"><b>Consumer Login -</b></h4>
@@ -49,15 +39,20 @@
               <input type="password">
 
               <div class="remember-forgot text-center" style="font-size: 14px;">
-                <a href="password-recovery.html"><b>Forgot Password?</b></a>
+                <a href="password-recovery.php"><b>Forgot Password?</b></a>
               </div><br>
               
               <button type="submit" style="background-color: green; color: white; border-radius: 2px;"><b>Login as Consumer</b></button>
               <div class="login-register text-center" style="font-size: 14px;">
-                <p><b>Haven't registered yet? </b><a href="register.html" class="register-link"><b>Register Here</b></a></p>
+                <p><b>Haven't registered yet? </b><a href="register.php" class="register-link"><b>Register Here</b></a></p>
               </div>
             </form>
         </div>
+
+        <!--consumer tab ends here-->
+
+        <!--distributor tab starts here-->
+
         <div id="distributorTab" class="tabPanel" style="background-color: white; width: 600px; padding-top: 30px;">
           <h4 style="padding-left: 10px;"><b>Distributor Login -</b></h4>
             <form style="padding-top: 20px; padding-left: 50px; padding-right: 50px; padding-bottom: 60px; ">
@@ -69,15 +64,20 @@
                 <input type="password">
 
                 <div class="remember-forgot text-center" style="font-size: 14px;">
-                  <a href="password-recovery.html"><b>Forgot Password?</b></a>
+                  <a href="password-recovery.php"><b>Forgot Password?</b></a>
                 </div><br>
                 
                 <button type="submit" style="background-color: green; color: white; border-radius: 2px;"><b>Login as Distributor</b></button>
                 <div class="login-register text-center" style="font-size: 14px;">
-                  <p><b>Haven't registered yet? </b><a href="register.html" class="register-link"><b>Register Here</b></a></p>
+                  <p><b>Haven't registered yet? </b><a href="register.php" class="register-link"><b>Register Here</b></a></p>
                 </div>
             </form>
         </div>
+
+        <!--distributor tab ends here-->
+
+        <!--admin tab starts here-->
+
         <div id="adminTab" class="tabPanel" style="background-color: white; width: 600px; padding-top: 30px;"><br>
           <h4 style="padding-left: 10px;"><b>Admin Login -</b></h4><br>
             <form style="padding-top: 20px; padding-left: 50px; padding-right: 50px; padding-bottom: 60px; ">
@@ -91,58 +91,19 @@
               <button type="submit" style="background-color: green; color: white; border-radius: 2px;"><b>Login as Admin</b></button>
             </form><br>
         </div>
+
+        <!--distributor tab ends here-->
+
       </div>
     </section>
-
+    <!-- ---- Login Form ends ---- -->
 
     <!-- --- Footer Section --- -->
-    <section class="features" style="background-color: rgb(10, 44, 10); padding-left: 0%;">
-        <div class="container">
-            <div class="row">
-              <div class="col-lg-3">
-                <div class="footer-address" style="padding-left: 0%;">
-                  <h4><b>- Quick Links</b></h4>
-                  <ul class="list-unstyled" style="font-size: larger; padding-left: 20px;">
-                    <li><a href="index.html" style="color: white;">Home</a></li>
-                    <li><a href="login.html" style="color: white;"> Log-in</a></li>
-                    <li><a href="register.html" style="color: white;"> Register</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-3" style="padding-left: 30px;">
-                <div class="footer-contact">
-                  <h4><b>Contact Us</b></h4>
-                  <p>East-Gotanagar, Maligaon<br>Guwahati, Assam, Pin: 781011<br>Email: info@example.com<br>Phone: +123456789</p>
-                </div>
-              </div>
-              <div class="col-lg-3" style="padding-left: 70px;">
-                <div class="quick-links">
-                  <h4><b>Developed By</b></h4>
-                  <ul class="list-unstyled">
-                    <p>- Pritviraj Keot <br> Roll No: UT-256-0032</p>
-                    <p>- Hirokjyoti Kalita <br> Roll No: UT-256-0032</p>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-3">
-                <div class="quick-links" style="padding-left: 100px;">
-                  <h4><b>Guided By</b></h4>
-                  <ul class="list-unstyled">
-                    <p>- Pinak Losan Patowary <br> Assistant Professor, LCBC</p>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-    </section>
-    <footer class="site-footer" style="background-color: green;">
-        <div class="container">
-          <div class="row" style="color: white;">
-            <h7><b>Online Gas Distribution System | Copyright © Pritviraj Keot & Hirokjyoti Kalita</b></h7>
-		      </div>
-        </div>
-    </footer>
-
+    <?php 
+      include 'includes/footer.php';
+    ?>
+    <!-- --- Footer Section --- -->
+    
     <script>
       function openTab(tabName) {
           let i;
